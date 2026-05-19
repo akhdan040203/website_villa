@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Karla:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ===== DESIGN TOKENS from Nakula design.md ===== */
+@theme {
+  --color-base: #000000;
+  --color-primary: #ffffff;
+  --color-secondary: #261607;
+  --color-inverse: #906b3e;
+  --color-raised: #ece6e3;
+  --color-border: #e5e7eb;
+  --font-primary: '__Philosopher_d388e14', '__Philosopher_Fallback_d388e14', 'Philosopher', sans-serif;
+  --radius-sm: 24px;
+  --radius-md: 50px;
+  --radius-pill: 9999px;
+}
+
+/* ===== BASE ===== */
+html { scroll-behavior: smooth; }
+body { font-family: '__Philosopher_d388e14', '__Philosopher_Fallback_d388e14', 'Philosopher', sans-serif; }
+
+/* ===== LOADING ===== */
+.loading-screen {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #000; display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.6s, visibility 0.6s;
+}
+.loading-screen.hidden { opacity: 0; visibility: hidden; }
+.loader-ring {
+  width: 44px; height: 44px;
+  border: 2px solid rgba(255,255,255,0.1); border-top-color: #906b3e;
+  border-radius: 50%; animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== NAVBAR ===== */
+.nav-scrolled {
+  background: rgba(255,255,255,0.95) !important;
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  box-shadow: rgba(0,0,0,0.12) 0 4px 10px;
+}
+.nav-scrolled .nav-text { color: #261607 !important; }
+.nav-scrolled .nav-link { color: #261607 !important; }
+.nav-scrolled .nav-link:hover { color: #906b3e !important; }
+.nav-scrolled .nav-cta {
+  background: #261607 !important; color: #fff !important;
+  border-color: #261607 !important;
+}
+.nav-scrolled #menu-toggle span { background: #261607 !important; }
+
+/* ===== HERO ===== */
+#hero img { transition: transform 0.1s linear; }
+
+/* ===== GALLERY ===== */
+#gallery {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+#gallery::-webkit-scrollbar { display: none; }
+.gallery-img {
+  scroll-snap-align: start; cursor: pointer; will-change: transform;
+}
+.gallery-img:hover { transform: scale(1.02); transition: transform 0.3s; }
+
+/* ===== CARDS ===== */
+.villa-card {
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s;
+}
+.villa-card:hover {
+  transform: translateY(-6px);
+  box-shadow: rgba(0,0,0,0.2) 1px 2px 8px;
+}
+
+/* ===== ACCORDION ===== */
+.accordion-content { transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1); }
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg); background: #261607; color: #fff; border-color: #261607;
+}
+
+/* ===== TESTIMONIAL SLIDER ===== */
+.testimonial-track { transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+
+/* ===== REVEAL (GSAP handles initial state) ===== */
+.reveal-left, .reveal-right, .reveal-up { will-change: transform, opacity; }
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(0,0,0,0.92); backdrop-filter: blur(10px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s; cursor: zoom-out;
+}
+.lightbox.active { opacity: 1; visibility: visible; }
+.lightbox img {
+  max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 12px;
+  transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.lightbox.active img { transform: scale(1); }
+
+/* ===== FORM ===== */
+input, textarea, button, select {
+  font-family: inherit;
+}
+input:focus, textarea:focus {
+  border-color: #906b3e !important;
+  box-shadow: 0 0 0 3px rgba(144,107,62,0.12);
+}
+
+/* ===== CURSOR GLOW ===== */
+.cursor-glow {
+  position: fixed; width: 280px; height: 280px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(144,107,62,0.06) 0%, transparent 70%);
+  pointer-events: none; z-index: 1; transform: translate(-50%,-50%); transition: opacity 0.3s;
+}
+
+/* ===== SELECTION ===== */
+::selection { background: #906b3e; color: #fff; }
+
+/* ===== WHY BOOK WITH US INTERACTIVE LAYOUT ===== */
+.why-tab {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.why-tab.active {
+  opacity: 1 !important;
+}
+.why-tab.active .why-tab-line {
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+}
+.why-panel {
+  transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1), filter 0.7s ease, opacity 0.7s ease;
+}
+.why-panel.active {
+  flex: 4.5 !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+#why-desc {
+  transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+
+

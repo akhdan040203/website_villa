@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Lembang — Lembang Villa Management & Sewa Villa Privat Mewah</title>
+  <meta name="description" content="Villa Lembang menyediakan layanan manajemen villa privat premium dan sewa villa mewah di dataran tinggi Lembang, Bandung. Sempurna untuk keluarga, gathering, dan acara eksklusif.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script type="module" crossorigin src="/assets/index-97BbPzck.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Pk0PGZFA.css">
+</head>
+<body class="bg-white text-secondary antialiased" style="font-family:'__Philosopher_d388e14', '__Philosopher_Fallback_d388e14', 'Philosopher', sans-serif;">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+    <div class="max-w-[1280px] mx-auto flex items-center justify-between px-6 md:px-10 py-4">
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="text-[20px] font-bold text-white nav-text tracking-wide transition-colors duration-500">Villa Lembang</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="#about" class="nav-link text-[14px] text-white/80 hover:text-white transition-colors duration-200">Tentang Kami</a>
+        <a href="#why-book" class="nav-link text-[14px] text-white/80 hover:text-white transition-colors duration-200">Keunggulan</a>
+        <a href="#properties" class="nav-link text-[14px] text-white/80 hover:text-white transition-colors duration-200">Koleksi Villa</a>
+        <a href="#services" class="nav-link text-[14px] text-white/80 hover:text-white transition-colors duration-200">Layanan</a>
+        <a href="#testimonials" class="nav-link text-[14px] text-white/80 hover:text-white transition-colors duration-200">Ulasan</a>
+        <a href="#contact" class="nav-link text-[14px] text-white/80 hover:text-white transition-colors duration-200">Kontak</a>
+      </div>
+      <a href="#contact" class="nav-cta hidden lg:inline-flex text-[12px] tracking-wider uppercase font-semibold border border-white/30 text-white px-5 py-2.5 rounded-[50px] hover:bg-white hover:text-[#261607] transition-all duration-300">
+        Hubungi Kami
+      </a>
+      <button id="menu-toggle" class="lg:hidden w-8 h-8 flex flex-col justify-center gap-1.5">
+        <span class="block w-full h-[2px] bg-white transition-all"></span>
+        <span class="block w-full h-[2px] bg-white transition-all"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="fixed inset-0 bg-[#261607]/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center gap-7 opacity-0 pointer-events-none transition-opacity duration-500">
+    <button id="menu-close" class="absolute top-5 right-6 text-white text-3xl">&times;</button>
+    <a href="#about" class="mob-link text-white text-[18px] tracking-widest uppercase">Tentang Kami</a>
+    <a href="#why-book" class="mob-link text-white text-[18px] tracking-widest uppercase">Keunggulan</a>
+    <a href="#properties" class="mob-link text-white text-[18px] tracking-widest uppercase">Koleksi Villa</a>
+    <a href="#services" class="mob-link text-white text-[18px] tracking-widest uppercase">Layanan</a>
+    <a href="#testimonials" class="mob-link text-white text-[18px] tracking-widest uppercase">Ulasan</a>
+    <a href="#contact" class="mob-link text-white text-[18px] tracking-widest uppercase">Kontak</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="relative h-screen min-h-[650px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <video autoplay muted loop playsinline poster="/assets/hero-bg-ebRlmIxp.png" class="w-full h-full object-cover">
+        <source src="/assets/video_heroo-BoZQ9h5q.mp4" type="video/mp4">
+        Your browser tidak mendukung tag video.
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-10">
+      <h1 id="hero-title" class="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-white leading-[1.1] max-w-[700px] mb-5">
+        Villa Privat Termewah di Lembang
+      </h1>
+      <p id="hero-sub" class="text-white/60 text-[16px] max-w-[520px] mb-8 leading-[1.7]">
+        Temukan koleksi villa mewah pilihan yang dikelola secara profesional di pegunungan sejuk Bandung. Dari liburan keluarga yang hangat hingga acara korporat eksklusif — kami merancang momen Lembang yang tak terlupakan.
+      </p>
+      <div id="hero-btns" class="flex flex-wrap gap-4">
+        <a href="#properties" class="bg-[#906b3e] text-white text-[12px] tracking-[0.15em] uppercase font-bold px-8 py-3.5 rounded-[50px] hover:bg-[#7a5a33] transition-colors duration-300">Jelajahi Villa</a>
+        <a href="#about" class="border border-white/30 text-white text-[12px] tracking-[0.15em] uppercase font-bold px-8 py-3.5 rounded-[50px] hover:bg-white/10 transition-colors duration-300">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERKS BAR -->
+  <section class="bg-white py-5 border-b border-[#261607]/5">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center">
+      <div class="flex items-center gap-2">
+        <span class="text-[#906b3e] text-[18px]">✦</span>
+        <p class="text-[#261607]/80 text-[13px] font-medium">Gratis Antar-Jemput Stasiun & Bandara Bandung</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-[#906b3e] text-[18px]">✦</span>
+        <p class="text-[#261607]/80 text-[13px] font-medium">Termasuk Sarapan Hangat & Teh Pegunungan</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-[#906b3e] text-[18px]">✦</span>
+        <p class="text-[#261607]/80 text-[13px] font-medium">Layanan Pramutamu (Concierge) Personal</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 md:py-28 bg-white border-b border-[#261607]/10">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left Side: Text and Large Image -->
+        <div class="lg:col-span-7 flex flex-col gap-8">
+          <div class="reveal-left">
+            <p class="text-[#906b3e] text-[12px] tracking-[0.3em] uppercase font-semibold mb-3">Tentang Kami</p>
+            <h2 class="text-[32px] md:text-[42px] font-bold text-[#261607] leading-[1.15] mb-5">Merancang Pengalaman Villa Terbaik di Lembang</h2>
+            <p class="text-[#261607]/80 text-[16px] md:text-[18px] leading-[1.7] mb-6 font-medium">
+              Kami adalah penyedia sewa villa terkemuka di Lembang dengan portofolio lebih dari 50 akomodasi mewah pilihan yang tersebar di kawasan pegunungan yang asri. Jelajahi koleksi kami dan wujudkan liburan impian Anda di Lembang menjadi momen yang tak terlupakan.
+            </p>
+            <p class="text-[#261607]/60 text-[15px] leading-[1.8] mb-6">
+              Villa Lembang adalah perusahaan manajemen villa premium yang berbasis di Lembang, Bandung. Kami berspesialisasi dalam mengurasi dan mengelola villa privat mewah di dataran tinggi paling eksotis — mulai dari lembah berkabut Maribaya hingga kesejukan hutan pinus Cikole dan kawasan Dago Hills yang menawan. Tim kami berdedikasi untuk memastikan setiap tamu menikmati keramahtamahan kelas dunia, layanan personal, dan kesegaran udara pegunungan Lembang yang autentik.
+            </p>
+            
+            <!-- Statistics -->
+            <div class="flex gap-8 border-t border-[#261607]/10 pt-6">
+              <div>
+                <p class="text-[32px] font-bold text-[#906b3e]">50+</p>
+                <p class="text-[12px] text-[#261607]/50 uppercase tracking-wider">Villa Premium</p>
+              </div>
+              <div>
+                <p class="text-[32px] font-bold text-[#906b3e]">10K+</p>
+                <p class="text-[12px] text-[#261607]/50 uppercase tracking-wider">Tamu Bahagia</p>
+              </div>
+              <div>
+                <p class="text-[32px] font-bold text-[#906b3e]">12+</p>
+                <p class="text-[12px] text-[#261607]/50 uppercase tracking-wider">Tahun Pengalaman</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Large Landscape Image -->
+          <div class="reveal-left overflow-hidden rounded-[9px] shadow-lg">
+              <video autoplay muted loop playsinline poster="/assets/hero-bg-ebRlmIxp.png" class="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-700">
+               <source src="/assets/video2-C_-XdNXG.mp4" type="video/mp4">
+               Your browser tidak mendukung tag video.
+              </video>
+          </div>
+        </div>
+        
+        <!-- Right Side: Staggered Masonry Collage -->
+        <div class="lg:col-span-5 lg:mt-24 flex flex-col gap-8">
+          <div class="reveal-right flex flex-col gap-8">
+            <!-- Top Right Image -->
+            <div class="overflow-hidden rounded-[9px] shadow-lg">
+              <img src="/assets/about2-ByE41wyq.jpg" alt="Modern Lembang Luxury Villa" class="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Bottom Right Image -->
+            <div class="overflow-hidden rounded-[9px] shadow-lg">
+              <img src="/assets/about5-BOEHTDs0.jpg" alt="Serene Private Poolside" class="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY BOOK WITH US -->
+  <section id="why-book" class="py-20 md:py-28 bg-white border-b border-[#261607]/10">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div class="text-center mb-16 reveal-up">
+        <h2 class="text-[28px] md:text-[34px] font-bold tracking-[0.08em] text-[#261607] uppercase inline-block pb-3 border-b-2 border-[#906b3e]/30">
+          Mengapa Memilih Kami?
+        </h2>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-stretch reveal-up">
+        <!-- Left Side: Tabs -->
+        <div class="w-full md:w-[35%] flex flex-col justify-center gap-8 md:pr-4">
+          <!-- Tab 1 -->
+          <div class="why-tab active cursor-pointer flex items-center justify-between group transition-all duration-300" data-index="0">
+            <div class="flex items-start gap-4">
+              <span class="text-[12px] font-bold text-[#906b3e] tracking-wider mt-0.5">01</span>
+              <h3 class="text-[14px] md:text-[15px] font-bold tracking-[0.15em] text-[#261607] uppercase transition-all duration-300">
+                Garansi Harga<br>Terbaik
+              </h3>
+            </div>
+            <div class="why-tab-line w-16 h-[2px] bg-[#906b3e] hidden md:block opacity-100 transition-all duration-500 scale-x-100 origin-left"></div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div class="why-tab cursor-pointer flex items-center justify-between group opacity-40 hover:opacity-80 transition-all duration-300" data-index="1">
+            <div class="flex items-start gap-4">
+              <span class="text-[12px] font-bold text-[#906b3e] tracking-wider mt-0.5">02</span>
+              <h3 class="text-[14px] md:text-[15px] font-bold tracking-[0.15em] text-[#261607] uppercase transition-all duration-300">
+                Services 24 Jam
+              </h3>
+            </div>
+            <div class="why-tab-line w-16 h-[2px] bg-[#906b3e] hidden md:block opacity-0 transition-all duration-500 scale-x-0 origin-left"></div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="why-tab cursor-pointer flex items-center justify-between group opacity-40 hover:opacity-80 transition-all duration-300" data-index="2">
+            <div class="flex items-start gap-4">
+              <span class="text-[12px] font-bold text-[#906b3e] tracking-wider mt-0.5">03</span>
+              <h3 class="text-[14px] md:text-[15px] font-bold tracking-[0.15em] text-[#261607] uppercase transition-all duration-300">
+                Fasilitas Sarapan<br>Gratis
+              </h3>
+            </div>
+            <div class="why-tab-line w-16 h-[2px] bg-[#906b3e] hidden md:block opacity-0 transition-all duration-500 scale-x-0 origin-left"></div>
+          </div>
+        </div>
+
+        <!-- Right Side: Panel Grid -->
+        <div class="w-full md:w-[65%] flex flex-col gap-6">
+          <div class="flex h-[320px] md:h-[400px] gap-3 w-full">
+            <!-- Panel 1 -->
+            <div class="why-panel active flex-[4.5] h-full rounded-[9px] overflow-hidden relative cursor-pointer" data-index="0">
+              <img src="/assets/villa-interior-DGRk3LsU.png" alt="Best Price Guaranteed" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-[#261607]/10 hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+            
+            <!-- Panel 2 -->
+            <div class="why-panel flex-[0.7] h-full rounded-[9px] overflow-hidden relative cursor-pointer grayscale opacity-50" data-index="1">
+              <img src="/assets/reception-BqxGSRP7.jpg" alt="Complimentary Pick Up" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black/20 hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+            
+            <!-- Panel 3 -->
+            <div class="why-panel flex-[0.7] h-full rounded-[9px] overflow-hidden relative cursor-pointer grayscale opacity-50" data-index="2">
+              <img src="/assets/breakfast-BVQvRrmd.jpg" alt="Complimentary Breakfast" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black/20 hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+          </div>
+          
+          <!-- Dynamic Description -->
+          <div class="min-h-[80px] transition-all duration-500">
+            <h4 id="why-headline" class="text-[16px] md:text-[18px] font-bold text-[#261607] mb-2 uppercase tracking-wider transition-all duration-500">Garansi Harga Terbaik</h4>
+            <p id="why-desc" class="text-[#261607]/70 text-[14px] leading-[1.7] transition-all duration-500">
+              Rancang liburan Lembang impian Anda. Pesan langsung bersama kami untuk mendapatkan harga terbaik, keuntungan eksklusif, dan rencana perjalanan kustom. Nikmati aktivitas pilihan mulai dari tur off-road hingga makan malam privat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTIES -->
+  <section id="properties" class="py-20 md:py-28 bg-white border-b border-[#261607]/10">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div class="text-center mb-14 reveal-up">
+        <p class="text-[#906b3e] text-[12px] tracking-[0.3em] uppercase font-semibold mb-3">Koleksi Kami</p>
+        <h2 class="text-[32px] md:text-[42px] font-bold text-[#261607] leading-tight">Villa Mewah Pilihan Terbaik</h2>
+        <p class="text-[#261607]/50 text-[16px] mt-3 max-w-[550px] mx-auto">Setiap properti telah diinspeksi secara detail dan dikelola profesional untuk memenuhi standar kemewahan dan kenyamanan tertinggi.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal-up">
+        <!-- Villa 1: Villa Maribaya -->
+        <div class="villa-card group rounded-[12px] overflow-hidden bg-white border border-[#261607]/10 shadow-sm flex flex-col">
+          <!-- Image Section -->
+          <div class="relative overflow-hidden h-[260px] w-full">
+            <img src="/assets/villa-exterior-BBznSFqc.png" alt="Villa Maribaya" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <!-- Price Overlay -->
+            <div class="absolute bottom-4 left-5 flex flex-col">
+              <span class="text-white/80 text-[10px] uppercase tracking-wider font-semibold">Mulai Dari</span>
+              <span class="text-white text-[18px] md:text-[20px] font-bold tracking-wide">IDR 4.800.000 <span class="text-[12px] font-normal text-white/70">/ Malam</span></span>
+            </div>
+            <!-- Arrow Link -->
+            <a href="#contact" class="absolute bottom-4 right-5 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 transition-colors flex items-center justify-center text-white">
+              <span class="text-[16px] font-bold">→</span>
+            </a>
+          </div>
+          <!-- Info Section -->
+          <div class="p-6 flex flex-col gap-4 flex-grow">
+            <!-- Location, Rating & Action -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-[#261607]/60 text-[12.5px]">📍 Maribaya, Lembang</span>
+                <div class="flex items-center gap-1 text-[12.5px] text-[#261607]/60 font-medium">
+                  <span class="text-amber-500 text-[14px]">★</span>
+                  <span class="text-[#261607] font-bold">5</span>
+                  <span class="text-[#261607]/40 font-normal">| 12 Ulasan</span>
+                </div>
+              </div>
+              <a href="#contact" class="bg-[#906b3e] text-white text-[11px] tracking-wider uppercase font-bold py-2 px-5 rounded-[50px] hover:bg-[#7a5a33] transition-colors duration-300">Pesan</a>
+            </div>
+            <!-- Title -->
+            <h3 class="text-[20px] font-bold text-[#261607] font-serif leading-tight">Villa Maribaya 4KT</h3>
+            <!-- Specs -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[#261607]/70 text-[12px] border-t border-b border-[#261607]/10 py-3">
+              <span class="flex items-center gap-1">👤 8 Tamu</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛏️ 4 Kamar Tidur</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛁 4 Kamar Mandi</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">📐 450 m²</span>
+            </div>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Sarapan Gratis</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Cocok Keluarga</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Kolam Privat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Villa 2: Villa Cikole -->
+        <div class="villa-card group rounded-[12px] overflow-hidden bg-white border border-[#261607]/10 shadow-sm flex flex-col">
+          <!-- Image Section -->
+          <div class="relative overflow-hidden h-[260px] w-full">
+            <img src="/assets/villa-pool-o4xxz_3V.png" alt="Villa Cikole" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <!-- Price Overlay -->
+            <div class="absolute bottom-4 left-5 flex flex-col">
+              <span class="text-white/80 text-[10px] uppercase tracking-wider font-semibold">Mulai Dari</span>
+              <span class="text-white text-[18px] md:text-[20px] font-bold tracking-wide">IDR 7.200.000 <span class="text-[12px] font-normal text-white/70">/ Malam</span></span>
+            </div>
+            <!-- Arrow Link -->
+            <a href="#contact" class="absolute bottom-4 right-5 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 transition-colors flex items-center justify-center text-white">
+              <span class="text-[16px] font-bold">→</span>
+            </a>
+          </div>
+          <!-- Info Section -->
+          <div class="p-6 flex flex-col gap-4 flex-grow">
+            <!-- Location, Rating & Action -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-[#261607]/60 text-[12.5px]">📍 Cikole, Lembang</span>
+                <div class="flex items-center gap-1 text-[12.5px] text-[#261607]/60 font-medium">
+                  <span class="text-amber-500 text-[14px]">★</span>
+                  <span class="text-[#261607] font-bold">5</span>
+                  <span class="text-[#261607]/40 font-normal">| 15 Ulasan</span>
+                </div>
+              </div>
+              <a href="#contact" class="bg-[#906b3e] text-white text-[11px] tracking-wider uppercase font-bold py-2 px-5 rounded-[50px] hover:bg-[#7a5a33] transition-colors duration-300">Pesan</a>
+            </div>
+            <!-- Title -->
+            <h3 class="text-[20px] font-bold text-[#261607] font-serif leading-tight">Villa Cikole 5KT</h3>
+            <!-- Specs -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[#261607]/70 text-[12px] border-t border-b border-[#261607]/10 py-3">
+              <span class="flex items-center gap-1">👤 10 Tamu</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛏️ 5 Kamar Tidur</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛁 5 Kamar Mandi</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">📐 650 m²</span>
+            </div>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Tepi Hutan Pinus</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Jacuzzi Privat</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Perapian Hangat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Villa 3: Villa Dago Hills -->
+        <div class="villa-card group rounded-[12px] overflow-hidden bg-white border border-[#261607]/10 shadow-sm flex flex-col">
+          <!-- Image Section -->
+          <div class="relative overflow-hidden h-[260px] w-full">
+            <img src="/assets/villa-bedroom-7T1wXvQw.png" alt="Villa Dago Hills" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <!-- Price Overlay -->
+            <div class="absolute bottom-4 left-5 flex flex-col">
+              <span class="text-white/80 text-[10px] uppercase tracking-wider font-semibold">Mulai Dari</span>
+              <span class="text-white text-[18px] md:text-[20px] font-bold tracking-wide">IDR 3.900.000 <span class="text-[12px] font-normal text-white/70">/ Malam</span></span>
+            </div>
+            <!-- Arrow Link -->
+            <a href="#contact" class="absolute bottom-4 right-5 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 transition-colors flex items-center justify-center text-white">
+              <span class="text-[16px] font-bold">→</span>
+            </a>
+          </div>
+          <!-- Info Section -->
+          <div class="p-6 flex flex-col gap-4 flex-grow">
+            <!-- Location, Rating & Action -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-[#261607]/60 text-[12.5px]">📍 Dago Hills, Bandung</span>
+                <div class="flex items-center gap-1 text-[12.5px] text-[#261607]/60 font-medium">
+                  <span class="text-amber-500 text-[14px]">★</span>
+                  <span class="text-[#261607] font-bold">4.9</span>
+                  <span class="text-[#261607]/40 font-normal">| 18 Ulasan</span>
+                </div>
+              </div>
+              <a href="#contact" class="bg-[#906b3e] text-white text-[11px] tracking-wider uppercase font-bold py-2 px-5 rounded-[50px] hover:bg-[#7a5a33] transition-colors duration-300">Pesan</a>
+            </div>
+            <!-- Title -->
+            <h3 class="text-[20px] font-bold text-[#261607] font-serif leading-tight">Villa Dago Hills 3KT</h3>
+            <!-- Specs -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[#261607]/70 text-[12px] border-t border-b border-[#261607]/10 py-3">
+              <span class="flex items-center gap-1">👤 6 Tamu</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛏️ 3 Kamar Tidur</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛁 3 Kamar Mandi</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">📐 320 m²</span>
+            </div>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">View Lampu Kota</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Fasilitas BBQ</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Billiard & Karaoke</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Villa 4: Villa Pine Forest -->
+        <div class="villa-card group rounded-[12px] overflow-hidden bg-white border border-[#261607]/10 shadow-sm flex flex-col">
+          <!-- Image Section -->
+          <div class="relative overflow-hidden h-[260px] w-full">
+            <img src="/assets/about5-BOEHTDs0.jpg" alt="Villa Pine Forest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <!-- Price Overlay -->
+            <div class="absolute bottom-4 left-5 flex flex-col">
+              <span class="text-white/80 text-[10px] uppercase tracking-wider font-semibold">Mulai Dari</span>
+              <span class="text-white text-[18px] md:text-[20px] font-bold tracking-wide">IDR 5.500.000 <span class="text-[12px] font-normal text-white/70">/ Malam</span></span>
+            </div>
+            <!-- Arrow Link -->
+            <a href="#contact" class="absolute bottom-4 right-5 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 transition-colors flex items-center justify-center text-white">
+              <span class="text-[16px] font-bold">→</span>
+            </a>
+          </div>
+          <!-- Info Section -->
+          <div class="p-6 flex flex-col gap-4 flex-grow">
+            <!-- Location, Rating & Action -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-[#261607]/60 text-[12.5px]">📍 Cikole, Lembang</span>
+                <div class="flex items-center gap-1 text-[12.5px] text-[#261607]/60 font-medium">
+                  <span class="text-amber-500 text-[14px]">★</span>
+                  <span class="text-[#261607] font-bold">4.8</span>
+                  <span class="text-[#261607]/40 font-normal">| 8 Ulasan</span>
+                </div>
+              </div>
+              <a href="#contact" class="bg-[#906b3e] text-white text-[11px] tracking-wider uppercase font-bold py-2 px-5 rounded-[50px] hover:bg-[#7a5a33] transition-colors duration-300">Pesan</a>
+            </div>
+            <!-- Title -->
+            <h3 class="text-[20px] font-bold text-[#261607] font-serif leading-tight">Villa Pine Forest 4KT</h3>
+            <!-- Specs -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[#261607]/70 text-[12px] border-t border-b border-[#261607]/10 py-3">
+              <span class="flex items-center gap-1">👤 8 Tamu</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛏️ 4 Kamar Tidur</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛁 4 Kamar Mandi</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">📐 480 m²</span>
+            </div>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Kolam Air Hangat</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Dekat Orchid Forest</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Smart TV & Netflix</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Villa 5: Villa Lembang Asri -->
+        <div class="villa-card group rounded-[12px] overflow-hidden bg-white border border-[#261607]/10 shadow-sm flex flex-col">
+          <!-- Image Section -->
+          <div class="relative overflow-hidden h-[260px] w-full">
+            <img src="/assets/about2-ByE41wyq.jpg" alt="Villa Lembang Asri" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <!-- Price Overlay -->
+            <div class="absolute bottom-4 left-5 flex flex-col">
+              <span class="text-white/80 text-[10px] uppercase tracking-wider font-semibold">Mulai Dari</span>
+              <span class="text-white text-[18px] md:text-[20px] font-bold tracking-wide">IDR 8.800.000 <span class="text-[12px] font-normal text-white/70">/ Malam</span></span>
+            </div>
+            <!-- Arrow Link -->
+            <a href="#contact" class="absolute bottom-4 right-5 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 transition-colors flex items-center justify-center text-white">
+              <span class="text-[16px] font-bold">→</span>
+            </a>
+          </div>
+          <!-- Info Section -->
+          <div class="p-6 flex flex-col gap-4 flex-grow">
+            <!-- Location, Rating & Action -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-[#261607]/60 text-[12.5px]">📍 Lembang Asri, Lembang</span>
+                <div class="flex items-center gap-1 text-[12.5px] text-[#261607]/60 font-medium">
+                  <span class="text-amber-500 text-[14px]">★</span>
+                  <span class="text-[#261607] font-bold">5</span>
+                  <span class="text-[#261607]/40 font-normal">| 22 Ulasan</span>
+                </div>
+              </div>
+              <a href="#contact" class="bg-[#906b3e] text-white text-[11px] tracking-wider uppercase font-bold py-2 px-5 rounded-[50px] hover:bg-[#7a5a33] transition-colors duration-300">Pesan</a>
+            </div>
+            <!-- Title -->
+            <h3 class="text-[20px] font-bold text-[#261607] font-serif leading-tight">Villa Lembang Asri 6KT</h3>
+            <!-- Specs -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[#261607]/70 text-[12px] border-t border-b border-[#261607]/10 py-3">
+              <span class="flex items-center gap-1">👤 14 Tamu</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛏️ 6 Kamar Tidur</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛁 6 Kamar Mandi</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">📐 800 m²</span>
+            </div>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Kapasitas Besar</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Dapur Chef Lengkap</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">View 360 Derajat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Villa 6: Villa Maribaya Valley -->
+        <div class="villa-card group rounded-[12px] overflow-hidden bg-white border border-[#261607]/10 shadow-sm flex flex-col">
+          <!-- Image Section -->
+          <div class="relative overflow-hidden h-[260px] w-full">
+            <img src="/assets/villa-interior-DGRk3LsU.png" alt="Villa Maribaya Valley" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <!-- Price Overlay -->
+            <div class="absolute bottom-4 left-5 flex flex-col">
+              <span class="text-white/80 text-[10px] uppercase tracking-wider font-semibold">Mulai Dari</span>
+              <span class="text-white text-[18px] md:text-[20px] font-bold tracking-wide">IDR 3.500.000 <span class="text-[12px] font-normal text-white/70">/ Malam</span></span>
+            </div>
+            <!-- Arrow Link -->
+            <a href="#contact" class="absolute bottom-4 right-5 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 transition-colors flex items-center justify-center text-white">
+              <span class="text-[16px] font-bold">→</span>
+            </a>
+          </div>
+          <!-- Info Section -->
+          <div class="p-6 flex flex-col gap-4 flex-grow">
+            <!-- Location, Rating & Action -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-[#261607]/60 text-[12.5px]">📍 Maribaya, Lembang</span>
+                <div class="flex items-center gap-1 text-[12.5px] text-[#261607]/60 font-medium">
+                  <span class="text-amber-500 text-[14px]">★</span>
+                  <span class="text-[#261607] font-bold">4.7</span>
+                  <span class="text-[#261607]/40 font-normal">| 10 Ulasan</span>
+                </div>
+              </div>
+              <a href="#contact" class="bg-[#906b3e] text-white text-[11px] tracking-wider uppercase font-bold py-2 px-5 rounded-[50px] hover:bg-[#7a5a33] transition-colors duration-300">Pesan</a>
+            </div>
+            <!-- Title -->
+            <h3 class="text-[20px] font-bold text-[#261607] font-serif leading-tight">Villa Maribaya Valley 3KT</h3>
+            <!-- Specs -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[#261607]/70 text-[12px] border-t border-b border-[#261607]/10 py-3">
+              <span class="flex items-center gap-1">👤 6 Tamu</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛏️ 3 Kamar Tidur</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">🛁 3 Kamar Mandi</span>
+              <span class="text-[#261607]/20">•</span>
+              <span class="flex items-center gap-1">📐 300 m²</span>
+            </div>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Dekat The Lodge</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Jacuzzi Hangat</span>
+              <span class="border border-[#261607]/10 text-[#261607]/60 text-[10.5px] px-3 py-1 rounded-[50px]">Cocok Bulan Madu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-15 reveal-up">
+        <a href="#contact" class="inline-flex bg-[#906b3e] text-white text-[12px] tracking-[0.15em] uppercase font-bold px-8 py-3.5 rounded-[50px] hover:bg-[#906b3e] transition-colors duration-300">Lihat Semua Properti</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-20 md:py-28 bg-white border-b border-[#261607]/10">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div class="text-center mb-14 reveal-up">
+        <p class="text-[#906b3e] text-[12px] tracking-[0.3em] uppercase font-semibold mb-3">Fasilitas & Layanan</p>
+        <h2 class="text-[32px] md:text-[42px] font-bold text-[#261607] leading-tight">Kenyamanan Bintang 5 Eksklusif</h2>
+        <p class="text-[#261607]/60 text-[16px] mt-3 max-w-[650px] mx-auto">Kami menghadirkan rangkaian fasilitas lengkap dan pelayanan personal kelas dunia demi kenyamanan tanpa kompromi selama Anda menginap di Villa Lembang.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <!-- Service 1: Housekeeping -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">Housekeeping</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Layanan pembersihan kamar harian profesional demi kenyamanan tidur optimal.</p>
+        </div>
+        <!-- Service 2: WiFi -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">WiFi</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Koneksi internet nirkabel berkecepatan tinggi tanpa batas di seluruh area villa.</p>
+        </div>
+        <!-- Service 3: AC & Water Heater -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">AC & Water Heater</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Suhu ruangan sejuk & air hangat untuk kesegaran mandi Anda.</p>
+        </div>
+        <!-- Service 4: TV & Entertainment -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">TV & Entertainment</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Smart TV layar lebar dengan akses film dan hiburan streaming premium.</p>
+        </div>
+        <!-- Service 5: Parking Area -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">Parking Area</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Area parkir kendaraan pribadi yang luas, aman, dan mudah diakses.</p>
+        </div>
+        <!-- Service 6: Security / CCTV -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">Security / CCTV</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Pengawasan keamanan 24 jam serta kamera CCTV demi privasi penuh.</p>
+        </div>
+        <!-- Service 7: Toiletries -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">Toiletries Lengkap</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Sabun, sampo berkualitas, dan handuk bersih disediakan harian.</p>
+        </div>
+        <!-- Service 8: Breakfast -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">Breakfast</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Sajian hidangan sarapan hangat lezat khas pegunungan Lembang.</p>
+        </div>
+        <!-- Service 9: Welcome Drink -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">Welcome Drink</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Sambutan hangat dengan minuman herbal segar pembuka saat Anda tiba.</p>
+        </div>
+        <!-- Service 10: Concierge -->
+        <div class="service-card bg-white border border-[#261607]/10 rounded-[24px] p-6 shadow-sm hover:shadow-md hover:border-[#906b3e]/40 transition-[box-shadow,border-color] duration-300 flex flex-col justify-center text-center min-h-[140px]">
+          <h3 class="text-[15px] font-bold text-[#261607] mb-2 leading-tight">Concierge</h3>
+          <p class="text-[#261607]/60 text-[12px] leading-relaxed">Asisten pramutamu personal yang siap memenuhi setiap keperluan Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-20 md:py-28 bg-white border-b border-[#261607]/10">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div class="text-center mb-12 reveal-up">
+        <p class="text-[#906b3e] text-[12px] tracking-[0.3em] uppercase font-semibold mb-3">Ulasan Tamu</p>
+        <h2 class="text-[32px] md:text-[42px] font-bold text-[#261607] leading-tight">Apa Kata Tamu Kami</h2>
+      </div>
+      <!-- Testimonials Centered Carousel Wrapper -->
+      <div class="overflow-hidden reveal-up">
+        <div id="testimonial-track" class="testimonial-track flex items-stretch py-6 select-none">
+          <!-- Card 1: Emily -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/villa-exterior-BBznSFqc.png" alt="Villa Exterior" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 5.0</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Villa ini sangat indah, modern, dan menakjubkan. Seluruh staf sangat ramah dan sangat sigap membantu. Setiap detail sangat sempurna — mulai dari kolam renang privat hingga sarapannya. Kami pasti akan kembali!"</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">Emily</p>
+                    <p class="text-[12px] text-[#261607]/40">Australia</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Sean -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/reception-BqxGSRP7.jpg" alt="Reception Service" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 4.8</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Properti ini adalah permata tersembunyi di Lembang. Jauh lebih baik daripada foto-fotonya dan melebihi ekspektasi kami. Proses check-in sangat lancar, sarapannya luar biasa, dan suasananya begitu menenangkan."</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">Sean</p>
+                    <p class="text-[12px] text-[#261607]/40">Australia</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Lindsey -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/villa-bedroom-7T1wXvQw.png" alt="Villa Bedroom" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 5.0</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Pengalaman menginap yang luar biasa dan sangat sempurna untuk reuni keluarga kami. Kamarnya luas, mewah, bersih, dan sangat nyaman. Pemandangan gunung di pagi hari sungguh luar biasa."</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">Lindsey</p>
+                    <p class="text-[12px] text-[#261607]/40">Amerika Serikat</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Doru -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/about-TZBYzoxQ.jpg" alt="Lembang Highlands" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 5.0</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Kami disambut dengan sangat hangat dan dimanjakan sepanjang masa menginap. Staf concierge membantu memesankan tur off-road dan menyiapkan makan malam privat yang luar biasa."</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">Doru</p>
+                    <p class="text-[12px] text-[#261607]/40">Prancis</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Yuki -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/about2-ByE41wyq.jpg" alt="Villa Architecture" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 4.9</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Kombinasi arsitektur modern yang mewah dengan kesejukan hutan pinus Lembang yang damai. Desain interior sangat berkelas, air hangat melimpah, dan kasurnya sangat nyaman."</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">Yuki</p>
+                    <p class="text-[12px] text-[#261607]/40">Jepang</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Michael -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/about5-BOEHTDs0.jpg" alt="Villa Poolside" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 5.0</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Kebersihan luar biasa bintang lima dan privasi yang sangat terjaga. Kolam renang privat hangat sangat menyegarkan di tengah udara sejuk pegunungan Lembang. Sangat direkomendasikan!"</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">Michael</p>
+                    <p class="text-[12px] text-[#261607]/40">Jerman</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Siti -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/reception-BqxGSRP7.jpg" alt="Concierge Desk" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 4.8</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Layanan concierge 24 jam sangat membantu! Mereka menyiapkan hidangan pembuka yang lezat saat kami tiba terlambat di malam hari. Semua fasilitas seperti WiFi cepat berfungsi sempurna."</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">Siti</p>
+                    <p class="text-[12px] text-[#261607]/40">Singapura</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: David -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/breakfast-BVQvRrmd.jpg" alt="Gourmet Breakfast" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 5.0</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Sarapan gratis di pagi hari yang disiapkan oleh koki pribadi sungguh luar biasa lezat. Teh hangat Lembang dipadu dengan buah segar lokal membuat awal hari kami terasa sangat istimewa."</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">David</p>
+                    <p class="text-[12px] text-[#261607]/40">Inggris</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: Budi -->
+          <div class="testi-card flex-shrink-0 w-[85vw] md:w-[400px] transition-all duration-500 ease-out px-3">
+            <div class="testi-inner-card bg-white border border-[#261607]/10 rounded-[12px] overflow-hidden shadow-sm flex flex-col h-full transition-all duration-500">
+              <div class="h-[180px] overflow-hidden relative">
+                <img src="/assets/villa-interior-DGRk3LsU.png" alt="Villa Interior" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#261607]/10"></div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex gap-1 mb-3 text-amber-500 text-[14px]">★ 5.0</div>
+                  <p class="text-[14px] text-[#261607]/70 leading-relaxed mb-6 italic">"Menyewa Villa Lembang Asri untuk acara gathering perusahaan kami. Ruang tengahnya sangat luas dan mewah, halaman belakang asri, dan stafnya sangat profesional memfasilitasi acara kami."</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-[#261607]/10 pt-4 mt-auto">
+                  <div>
+                    <p class="text-[14px] font-bold text-[#261607]">Budi</p>
+                    <p class="text-[12px] text-[#261607]/40">Indonesia</p>
+                  </div>
+                  <span class="text-[12px] font-bold text-[#906b3e] uppercase tracking-wider">Verified Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slider Navigation Controls -->
+      <div class="flex justify-center gap-4 mt-8">
+        <button id="testi-prev" class="w-10 h-10 rounded-full border border-[#261607]/20 flex items-center justify-center hover:bg-[#261607] hover:text-white hover:border-[#261607] transition-all text-[14px]" aria-label="Previous Slide">←</button>
+        <button id="testi-next" class="w-10 h-10 rounded-full border border-[#261607]/20 flex items-center justify-center hover:bg-[#261607] hover:text-white hover:border-[#261607] transition-all text-[14px]" aria-label="Next Slide">→</button>
+      </div>
+      <!-- Dynamic Pagination Dots -->
+      <div id="testi-pagination" class="flex justify-center gap-2 mt-6"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 md:py-28 bg-white">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div class="max-w-[560px] mx-auto text-center reveal-up">
+        <p class="text-[#906b3e] text-[12px] tracking-[0.3em] uppercase font-semibold mb-3">Hubungi Kami</p>
+        <h2 class="text-[32px] md:text-[42px] font-bold text-[#261607] leading-tight mb-3">Rencanakan Liburan Lembang Anda</h2>
+        <p class="text-[#261607]/50 text-[14px] mb-10">Ceritakan tentang masa menginap impian Anda dan tim kami akan merancang penawaran kustom yang personal.</p>
+        <form id="contact-form" class="space-y-4 text-left">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Nama Lengkap" class="w-full border border-[#261607]/10 rounded-[50px] px-5 py-3 text-[14px] bg-white/90 focus:bg-white focus:outline-none transition-colors" required>
+            <input type="email" placeholder="Alamat Email" class="w-full border border-[#261607]/10 rounded-[50px] px-5 py-3 text-[14px] bg-white/90 focus:bg-white focus:outline-none transition-colors" required>
+          </div>
+          <input type="tel" placeholder="Nomor Telepon / WhatsApp" class="w-full border border-[#261607]/10 rounded-[50px] px-5 py-3 text-[14px] bg-white/90 focus:bg-white focus:outline-none transition-colors">
+          <textarea placeholder="Ceritakan tentang rencana liburan Anda (tanggal menginap, jumlah tamu, permintaan khusus...)" rows="4" class="w-full border border-[#261607]/10 rounded-[24px] px-5 py-3 text-[14px] bg-white/90 focus:bg-white focus:outline-none transition-colors resize-none"></textarea>
+          <button type="submit" class="w-full bg-[#906b3e] text-white text-[12px] tracking-[0.15em] uppercase font-bold py-3.5 rounded-[50px] hover:bg-[#7a5a33] transition-colors">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#906b3e] text-[#fcfbf9] py-14">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        <div class="md:col-span-2">
+          <p class="text-[20px] font-bold mb-3 text-white">Villa Lembang</p>
+          <p class="text-white/80 text-[14px] leading-relaxed max-w-[350px]">Pelopor manajemen villa premium dan penyewaan villa privat di Lembang. Merancang pengalaman liburan pegunungan mewah yang tak terlupakan sejak 2014.</p>
+        </div>
+        <div>
+          <h4 class="text-[12px] tracking-[0.2em] uppercase font-bold mb-4 text-white">Tautan Pintas</h4>
+          <div class="space-y-2">
+            <a href="#about" class="block text-white/70 text-[13px] hover:text-white transition-colors">Tentang Kami</a>
+            <a href="#properties" class="block text-white/70 text-[13px] hover:text-white transition-colors">Koleksi Villa</a>
+            <a href="#services" class="block text-white/70 text-[13px] hover:text-white transition-colors">Layanan</a>
+            <a href="#contact" class="block text-white/70 text-[13px] hover:text-white transition-colors">Kontak</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-[12px] tracking-[0.2em] uppercase font-bold mb-4 text-white">Kontak</h4>
+          <p class="text-white/80 text-[13px]">info@villalembang.com</p>
+          <p class="text-white/80 text-[13px] mt-1">+62 821 4581 1275</p>
+          <p class="text-white/80 text-[13px] mt-1">Lembang, Bandung, Indonesia</p>
+        </div>
+      </div>
+      <hr class="border-white/20 mb-5">
+      <p class="text-white/60 text-[12px] text-center">© 2026 Villa Lembang. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
