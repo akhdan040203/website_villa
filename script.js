@@ -1,18 +1,32 @@
 /* ===== Villa Gunung — Interactive JS + GSAP ===== */
 document.addEventListener('DOMContentLoaded', () => {
+  const videoSources = {
+    about: new URL('./assets/video/video2.mp4', import.meta.url).href,
+  };
 
   // ===== LOADER =====
   const loader = document.createElement('div');
   loader.className = 'loading-screen';
   loader.innerHTML = '<div class="loader-ring"></div>';
   document.body.prepend(loader);
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('hidden');
-      setTimeout(() => loader.remove(), 600);
-      initAnimations();
-    }, 300);
-  });
+
+  let loaderDone = false;
+  function finishLoading() {
+    if (loaderDone) return;
+    loaderDone = true;
+    loader.classList.add('hidden');
+    setTimeout(() => loader.remove(), 600);
+    initAnimations();
+  }
+
+  const heroVideoForLoader = document.querySelector('#hero video');
+  if (heroVideoForLoader && heroVideoForLoader.readyState < 2) {
+    heroVideoForLoader.addEventListener('loadeddata', () => setTimeout(finishLoading, 250), { once: true });
+    heroVideoForLoader.addEventListener('error', finishLoading, { once: true });
+    setTimeout(finishLoading, 1600);
+  } else {
+    setTimeout(finishLoading, 500);
+  }
 
   // ===== NAVBAR =====
   const navbar = document.getElementById('navbar');
@@ -38,6 +52,43 @@ document.addEventListener('DOMContentLoaded', () => {
         heroMedia.style.transform = `scale(1.05) translateY(${window.scrollY * 0.12}px)`;
       }
     });
+  }
+
+  document.querySelectorAll('video[autoplay]').forEach(video => {
+    video.muted = true;
+    video.playsInline = true;
+    const playVideo = () => video.play().catch(() => {});
+    const lazySource = video.querySelector('source[data-src]') || video.dataset.videoSrc;
+    if (lazySource) return;
+    if (video.readyState >= 2) {
+      playVideo();
+    } else {
+      video.addEventListener('canplay', playVideo, { once: true });
+    }
+  });
+
+  const lazyVideos = document.querySelectorAll('video[data-lazy-video]');
+  const loadLazyVideo = video => {
+    const source = video.querySelector('source');
+    if (!source) return;
+    source.src = source.dataset.src || videoSources[video.dataset.videoSrc];
+    if (!source.src) return;
+    source.removeAttribute('data-src');
+    video.load();
+    video.play().catch(() => {});
+  };
+
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        loadLazyVideo(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '600px 0px' });
+    lazyVideos.forEach(video => videoObserver.observe(video));
+  } else {
+    lazyVideos.forEach(loadLazyVideo);
   }
 
   // ===== CENTERING TESTIMONIAL CAROUSEL WITH ZOOM EFFECT & AUTOPLAY =====
