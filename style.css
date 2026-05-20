@@ -70,6 +70,16 @@ body { font-family: '__Philosopher_d388e14', '__Philosopher_Fallback_d388e14', '
   transform: translateY(-6px);
   box-shadow: rgba(0,0,0,0.2) 1px 2px 8px;
 }
+.villa-meta-icon {
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+  flex: 0 0 13px;
+  opacity: 0.62;
+}
+.villa-location-icon {
+  opacity: 0.72;
+}
 
 /* ===== ACCORDION ===== */
 .accordion-content { transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1); }
@@ -141,5 +151,4 @@ input:focus, textarea:focus {
   transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: opacity, transform;
 }
-
 
