@@ -1,9 +1,5 @@
 /* ===== Villa Gunung — Interactive JS + GSAP ===== */
 document.addEventListener('DOMContentLoaded', () => {
-  const videoSources = {
-    about: new URL('./assets/video/video2.mp4', import.meta.url).href,
-  };
-
   // ===== LOADER =====
   const loader = document.createElement('div');
   loader.className = 'loading-screen';
@@ -58,38 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     video.muted = true;
     video.playsInline = true;
     const playVideo = () => video.play().catch(() => {});
-    const lazySource = video.querySelector('source[data-src]') || video.dataset.videoSrc;
-    if (lazySource) return;
     if (video.readyState >= 2) {
       playVideo();
     } else {
       video.addEventListener('canplay', playVideo, { once: true });
     }
   });
-
-  const lazyVideos = document.querySelectorAll('video[data-lazy-video]');
-  const loadLazyVideo = video => {
-    const source = video.querySelector('source');
-    if (!source) return;
-    source.src = source.dataset.src || videoSources[video.dataset.videoSrc];
-    if (!source.src) return;
-    source.removeAttribute('data-src');
-    video.load();
-    video.play().catch(() => {});
-  };
-
-  if ('IntersectionObserver' in window) {
-    const videoObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        loadLazyVideo(entry.target);
-        observer.unobserve(entry.target);
-      });
-    }, { rootMargin: '600px 0px' });
-    lazyVideos.forEach(video => videoObserver.observe(video));
-  } else {
-    lazyVideos.forEach(loadLazyVideo);
-  }
 
   // ===== CENTERING TESTIMONIAL CAROUSEL WITH ZOOM EFFECT & AUTOPLAY =====
   const track = document.getElementById('testimonial-track');
